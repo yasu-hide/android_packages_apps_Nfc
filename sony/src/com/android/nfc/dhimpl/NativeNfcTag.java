@@ -37,7 +37,7 @@ import android.util.Log;
  * Native interface to the NFC tag functions
  */
 public class NativeNfcTag implements TagEndpoint {
-    static final boolean DBG = false;
+    static final boolean DBG = true;
 
     static final int STATUS_CODE_TARGET_LOST = 146;
 

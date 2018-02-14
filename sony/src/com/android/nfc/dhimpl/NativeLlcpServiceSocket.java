@@ -33,7 +33,13 @@ public class NativeLlcpServiceSocket implements DeviceHost.LlcpServerSocket {
     private int mSap;
     private String mServiceName;
 
-    public NativeLlcpServiceSocket(){ }
+    public NativeLlcpServiceSocket() {
+        mHandle = 0;
+        mLocalMiu = 0;
+        mLocalRw = 0;
+        mLocalLinearBufferLength = 0;
+        mSap = 0;
+    }
 
     private native NativeLlcpSocket doAccept(int miu, int rw, int linearBufferLength);
     @Override
