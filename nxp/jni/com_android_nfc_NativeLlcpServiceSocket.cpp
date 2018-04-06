@@ -17,7 +17,7 @@
 #include <errno.h>
 #include <malloc.h>
 #include <semaphore.h>
-#include <ScopedLocalRef.h>
+#include <nativehelper/ScopedLocalRef.h>
 
 #include "com_android_nfc.h"
 
@@ -71,7 +71,6 @@ static phLibNfc_Handle getIncomingSocket(nfc_jni_native_monitor_t * pMonitor,
 static jobject com_NativeLlcpServiceSocket_doAccept(JNIEnv *e, jobject o, jint miu, jint rw, jint linearBufferLength)
 {
    NFCSTATUS ret = NFCSTATUS_SUCCESS;
-   struct timespec ts;
    phLibNfc_Llcp_sSocketOptions_t sOptions;
    phNfc_sData_t sWorkingBuffer;
    jfieldID f;   
