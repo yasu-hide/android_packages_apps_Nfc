@@ -117,6 +117,16 @@ public class NativeNfcManager implements DeviceHost {
         return;
     }
 
+    @Override
+    public void factoryReset() {
+        return;
+    }
+
+    @Override
+    public void shutdown() {
+        return;
+    }
+
     private native int nativeDeinitialize();
 
     @Override
